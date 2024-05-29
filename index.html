@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torque Wrench Extension Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Torque Wrench Extension Calculator</h1>
+        <div class="input-section">
+            <h2>Input Section</h2>
+            <label for="torque">Recommended Torque for Fastener (M2):</label>
+            <input type="number" id="torque" step="any">
+            <select id="torque-unit">
+                <option value="Nm">Nm</option>
+                <option value="ft-lb">ft-lb</option>
+            </select>
+
+            <label for="wrench-length">Length of Torque Wrench (L1):</label>
+            <input type="number" id="wrench-length" step="any">
+            <select id="wrench-length-unit">
+                <option value="inches">inches</option>
+                <option value="mm">mm</option>
+            </select>
+
+            <label for="extension-length">Length of Extension (part of L2):</label>
+            <input type="number" id="extension-length" step="any">
+            <select id="extension-length-unit">
+                <option value="inches">inches</option>
+                <option value="mm">mm</option>
+            </select>
+
+            <label for="angle">Angle of Extension:</label>
+            <input type="number" id="angle" value="90">
+        </div>
+
+        <div class="results-section">
+            <h2>Results Section</h2>
+            <p id="adjusted-torque">Adjusted Torque: </p>
+            <p id="unit-conversion">Unit Conversion: </p>
+        </div>
+
+        <div class="buttons">
+            <button id="calculate">Calculate</button>
+            <button id="reset">Reset</button>
+            <button id="save-pdf">Save as PDF</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
